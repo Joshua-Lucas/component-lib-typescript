@@ -1,10 +1,14 @@
 import React from 'react'
-
-import { ExampleComponent } from '@jludev/component-lib-typescript'
-import '@jludev/component-lib-typescript/dist/index.css'
+import { ThemeProvider } from 'styled-components'
+import { Theme } from './Utills'
+import FormExample from './Components/FormExample'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <ThemeProvider theme={Theme}>
+      <FormExample />
+    </ThemeProvider>
+  )
 }
 
 export default App

@@ -1,4 +1,5 @@
 // (https://tailwindcss.com/docs/container)
+
 const screenSize = {
   // Media Queries
   sm: '(min-width: 640px)',
