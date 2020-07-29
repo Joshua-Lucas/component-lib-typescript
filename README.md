@@ -26,7 +26,7 @@ Example of how simple it is to implement a component from this library.
 
 ```jsx
 import React, { Component } from 'react'
-import MyComponent from '@jludev/component-lib-react'
+import MyComponent from '@jludev/component-lib-typescript'
 
 const Example => () {
 
