@@ -61,6 +61,10 @@ Select:
 
 - Dropdown //Props{label, options[], event(This goes to an onChange & onBlur event)}
 
+Textarea:
+
+- Textarea //Props{label, value, required?(optional boolean), event(This goes to an onChange)}
+
 #### Utility Styles
 
 I have used these utility styles to help with quickly building style components. Here they are if you would like to use them.
@@ -85,8 +89,8 @@ const FormContainer = styled(FormDiv)`
 **Border Radius**
 
 UtilityStyles.borderRadius.
-  
- Key: Value:
+
+Key: Value:
 none: '0',
 
     sm: '0.125rem',
