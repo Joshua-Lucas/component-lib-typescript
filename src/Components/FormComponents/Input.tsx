@@ -16,6 +16,7 @@ export const InputElement = styled.input`
   margin-top: 0.25rem;
   margin-bottom: 2rem;
   padding: 1rem;
+  border: 2px solid ${(props) => props.theme.lightNeutralColor};
 
   &:hover {
     border: 2px solid ${(props) => props.theme.lightNeutralColor};
