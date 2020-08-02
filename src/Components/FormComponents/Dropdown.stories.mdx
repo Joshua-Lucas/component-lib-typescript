@@ -1,0 +1,25 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { action } from '@storybook/addon-actions'
+import Dropdown from './Dropdown.tsx'
+
+<Meta title='Design System|Dropdwon' component={Dropdown} />
+
+# Select Element
+
+Select Element are used to provide a user with a menu of options.
+
+## Usage
+
+Select Element are used to provide a user with a menu of options.
+
+## Base Select Element
+
+<Preview withToolbar>
+  <Story name='base'>
+    <Dropdown
+      label='Favorite Food?'
+      options={['pizza', 'salad', 'tacos']}
+      event={() => {}}
+    />
+  </Story>
+</Preview>
