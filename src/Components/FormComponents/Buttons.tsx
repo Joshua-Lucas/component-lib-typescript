@@ -29,4 +29,16 @@ const PrimaryButton = styled(Button)`
   color: white;
 `
 
-export default PrimaryButton
+const SecondaryButton = styled(Button)`
+  background-color: #fff;
+  border: 2px solid ${(props) => props.theme.secondaryColor};
+  color: ${(props) => props.theme.secondaryColor};
+`
+
+const TertiaryButton = styled(Button)`
+  background: none;
+  border: none;
+  color: ${(props) => props.theme.primaryColor};
+`
+
+export { PrimaryButton, SecondaryButton, TertiaryButton }
