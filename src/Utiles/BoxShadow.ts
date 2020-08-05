@@ -8,7 +8,8 @@ const boxShadow = {
   xl:
     '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
   xxl: ' 0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-  outline: ' 0 0 0 3px rgba(66, 153, 225, 0.5)'
+  outline: ' 0 0 0 3px rgba(66, 153, 225, 0.5)',
+  full: 'rgba(0, 0, 0, 0.15) 0px 20px 70px'
 }
 
 export default boxShadow
