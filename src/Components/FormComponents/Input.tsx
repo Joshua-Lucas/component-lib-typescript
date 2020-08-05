@@ -38,23 +38,24 @@ export const InputElement = styled.input`
 // INTERFACES
 
 export interface IInput {
-  label: string
+  label?: string
+  name: string
   type: string
   value: string | number
   event: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 // COMPONENT
-const Input: React.FC<IInput> = ({ label, type, value, event }) => {
-  const id = `input-${label.replace(' ', '').toLowerCase()}`
+const Input: React.FC<IInput> = ({ label, name, type, value, event }) => {
+  const id = `input-${name.replace(' ', '').toLowerCase()}`
   return (
     <React.Fragment>
       <Label htmlFor={id}>
         {label}
         <InputElement
-          type={type}
           id={id}
-          name={label}
+          name={name}
+          type={type}
           value={value}
           placeholder={`Enter ${label}`}
           onChange={event}

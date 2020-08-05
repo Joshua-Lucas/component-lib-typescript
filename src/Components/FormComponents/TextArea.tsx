@@ -37,13 +37,14 @@ const TextArea = styled.textarea`
 `
 
 interface ITextarea {
-  label: string
+  label?: string
+  name: string
   event: (event: React.ChangeEvent<HTMLTextAreaElement>) => void
   required?: boolean
 }
 
-const Textarea: React.FC<ITextarea> = ({ label, event, required }) => {
-  const id = `textarea-${label.replace(' ', '').toLowerCase()}`
+const Textarea: React.FC<ITextarea> = ({ label, name, event, required }) => {
+  const id = `textarea-${name.replace(' ', '').toLowerCase()}`
 
   return (
     <React.Fragment>
@@ -52,8 +53,8 @@ const Textarea: React.FC<ITextarea> = ({ label, event, required }) => {
         {/* Checks to render component with or without required statement */}
         {required ? (
           <TextArea
-            name={label}
             id={id}
+            name={name}
             placeholder={`Enter ${label}`}
             onChange={event}
             required
