@@ -38,15 +38,21 @@ const OptionElement = styled.option`
 // INTERFACES
 
 interface IDropdownProps {
-  label: string
+  label?: string
+  name: string
   options: string[]
   value?: string
   event: (event: React.ChangeEvent<HTMLSelectElement>) => void
 }
 
 // COMPONENTS
-const Dropdown: React.FC<IDropdownProps> = ({ label, options, event }) => {
-  const id = `dropdown-${label.replace(' ', '').toLowerCase()}`
+const Dropdown: React.FC<IDropdownProps> = ({
+  label,
+  name,
+  options,
+  event
+}) => {
+  const id = `dropdown-${name.replace(' ', '').toLowerCase()}`
   const selections = options.map((option) => (
     <OptionElement key={option} value={option}>
       {option}
@@ -57,7 +63,7 @@ const Dropdown: React.FC<IDropdownProps> = ({ label, options, event }) => {
     <React.Fragment>
       <DropDownLabel htmlFor={id}>
         {label} {/* This is optional */}
-        <SelectElement name={Label} id={id} onChange={event} onBlur={event}>
+        <SelectElement name={name} id={id} onChange={event} onBlur={event}>
           {selections}
         </SelectElement>
       </DropDownLabel>
