@@ -1,4 +1,5 @@
 import Input from './Components/FormComponents/Input'
+import { Icons } from './Icons'
 import {
   Button as BaseButton,
   PrimaryButton,
@@ -12,6 +13,7 @@ import UtilityStyles from './Utiles/index'
 
 export {
   Input,
+  Icons,
   BaseButton,
   PrimaryButton,
   SecondaryButton,
